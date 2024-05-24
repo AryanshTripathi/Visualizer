@@ -1,0 +1,54 @@
+.sorting__top_container {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}
+
+.sorting__heading {
+	color: #9c27b0;
+	font-size: 80px;
+	width: fit-content;
+}
+
+.sorting__menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100vw;
+	height: 20vh;
+	background-color: black;
+}
+
+.sorting__btn_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.sorting__btn_small_container {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.sorting__array_container {
+	overflow-y: hidden;
+	height: 580px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 2px;
+	border-bottom: 2px solid white;
+}
+
+.sorting__array_value {
+	background-color: turquoise;
+	margin: 0 2px;
+}
+
+.MuiSlider-thumb {
+	overflow-y: hidden !important;
+}
