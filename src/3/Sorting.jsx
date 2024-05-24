@@ -117,7 +117,7 @@ const Sorting = () => {
 	const createNewArray = (size) => {
 		const a = [];
 		for (let i = 0; i < size; i++) {
-			a.push(randomIntFromInterval(5, 100));
+			a.push(randomIntFromInterval(5, 95));
 		}
 		sortingRef.current = 0;
 		setArr(a);
@@ -466,13 +466,10 @@ const Sorting = () => {
 				color="secondary"
 				sx={{
 					display: sortingRef.current === 2 ? "block" : "none",
-					fontSize: "1em",
 					fontFamily: `"Arvo", serif`,
 					fontWeight: 700,
 					fontStyle: "normal",
-					position: "relative",
-					margin: "30px auto",
-					// bottom: "-20px",
+					margin: "30px auto 0px auto",
 				}}
 				onClick={() => {
 					setArr(arrayRef.current);

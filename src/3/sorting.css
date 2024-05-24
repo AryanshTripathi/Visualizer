@@ -6,7 +6,7 @@
 
 .sorting__heading {
 	color: #9c27b0;
-	font-size: 80px;
+	font-size: 70px;
 	width: fit-content;
 }
 
@@ -15,7 +15,7 @@
 	align-items: center;
 	justify-content: space-around;
 	width: 100vw;
-	height: 20vh;
+	height: 25vh;
 	background-color: black;
 }
 
@@ -36,7 +36,7 @@
 
 .sorting__array_container {
 	overflow-y: hidden;
-	height: 580px;
+	height: 80%;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
