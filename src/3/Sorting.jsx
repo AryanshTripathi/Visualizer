@@ -258,163 +258,165 @@ const Sorting = () => {
 						Generate New Array
 					</Button>
 				</div>
-				<div className="sorting__btn_container">
-					<div>
-						<div
-							style={{
-								display: "flex",
-								justifyContent: "flex-start",
-								alignItems: "center",
-							}}>
+				<div>
+					<div className="sorting__btn_container">
+						<div>
 							<div
-								className="arvo-bold-italic"
 								style={{
-									marginRight: "30px",
-									fontSize: "1.2em",
+									display: "flex",
+									justifyContent: "flex-start",
+									alignItems: "center",
 								}}>
-								Animation Speed
+								<div
+									className="arvo-bold-italic"
+									style={{
+										marginRight: "30px",
+										fontSize: "1.2em",
+									}}>
+									Animation Speed
+								</div>
+								<RadioGroup
+									aria-labelledby="Animation Speed Controller"
+									name="animation-speed-controller"
+									value={animationSpeed}
+									onChange={handleAnimationSpeedChange}
+									row>
+									<FormControlLabel
+										value={FAST_ANIMATION_SPEED}
+										control={
+											<Radio
+												color="secondary"
+												sx={{
+													color: "white",
+												}}
+											/>
+										}
+										label={<span className="arvo-regular-italic">Fast</span>}
+									/>
+									<FormControlLabel
+										value={MEDIUM_ANIMATION_SPEED}
+										control={
+											<Radio
+												color="secondary"
+												sx={{
+													color: "white",
+												}}
+											/>
+										}
+										label={<span className="arvo-regular-italic">Medium</span>}
+									/>
+									<FormControlLabel
+										value={SLOW_ANIMATION_SPEED}
+										control={
+											<Radio
+												color="secondary"
+												sx={{
+													color: "white",
+												}}
+											/>
+										}
+										label={<span className="arvo-regular-italic">Slow</span>}
+									/>
+								</RadioGroup>
 							</div>
-							<RadioGroup
-								aria-labelledby="Animation Speed Controller"
-								name="animation-speed-controller"
-								value={animationSpeed}
-								onChange={handleAnimationSpeedChange}
-								row>
-								<FormControlLabel
-									value={FAST_ANIMATION_SPEED}
-									control={
-										<Radio
-											color="secondary"
-											sx={{
-												color: "white",
-											}}
-										/>
-									}
-									label={<span className="arvo-regular-italic">Fast</span>}
-								/>
-								<FormControlLabel
-									value={MEDIUM_ANIMATION_SPEED}
-									control={
-										<Radio
-											color="secondary"
-											sx={{
-												color: "white",
-											}}
-										/>
-									}
-									label={<span className="arvo-regular-italic">Medium</span>}
-								/>
-								<FormControlLabel
-									value={SLOW_ANIMATION_SPEED}
-									control={
-										<Radio
-											color="secondary"
-											sx={{
-												color: "white",
-											}}
-										/>
-									}
-									label={<span className="arvo-regular-italic">Slow</span>}
-								/>
-							</RadioGroup>
-						</div>
-						<div className="sorting__btn_small_container">
-							<Button
-								sx={{
-									fontFamily: `"Arvo", serif`,
-									fontWeight: 400,
-									fontStyle: "italic",
-								}}
-								color="secondary"
-								variant="outlined"
-								className="sorting__btn"
-								onClick={() => {
-									if (sortingRef.current === 0) {
-										mergeSortVisualizer(arr.slice());
-									}
-								}}>
-								Merge Sort
-							</Button>
-							<Button
-								sx={{
-									fontFamily: `"Arvo", serif`,
-									fontWeight: 400,
-									fontStyle: "italic",
-								}}
-								color="secondary"
-								variant="outlined"
-								className="sorting__btn"
-								onClick={() => {
-									if (sortingRef.current === 0) {
-										quickSortVisualizer(arr.slice());
-									}
-								}}>
-								Quick Sort
-							</Button>
-							<Button
-								sx={{
-									fontFamily: `"Arvo", serif`,
-									fontWeight: 400,
-									fontStyle: "italic",
-								}}
-								color="secondary"
-								variant="outlined"
-								className="sorting__btn"
-								onClick={() => {
-									if (sortingRef.current === 0) {
-										bubbleSortVisualizer(arr.slice());
-									}
-								}}>
-								Bubble Sort
-							</Button>
-							<Button
-								sx={{
-									fontFamily: `"Arvo", serif`,
-									fontWeight: 400,
-									fontStyle: "italic",
-								}}
-								color="secondary"
-								variant="outlined"
-								className="sorting__btn"
-								onClick={() => {
-									if (sortingRef.current === 0) {
-										insertionSortVisualizer(arr.slice());
-									}
-								}}>
-								Insertion Sort
-							</Button>
-							<Button
-								sx={{
-									fontFamily: `"Arvo", serif`,
-									fontWeight: 400,
-									fontStyle: "italic",
-								}}
-								color="secondary"
-								variant="outlined"
-								className="sorting__btn"
-								onClick={() => {
-									if (sortingRef.current === 0) {
-										selectionSortVisualizer(arr.slice());
-									}
-								}}>
-								Selection Sort
-							</Button>
-							<Button
-								sx={{
-									fontFamily: `"Arvo", serif`,
-									fontWeight: 400,
-									fontStyle: "italic",
-								}}
-								variant="outlined"
-								color="secondary"
-								className="sorting__btn"
-								onClick={() => {
-									if (sortingRef.current === 0) {
-										heapSortVisualizer(arr.slice());
-									}
-								}}>
-								Heap Sort
-							</Button>
+							<div className="sorting__btn_small_container">
+								<Button
+									sx={{
+										fontFamily: `"Arvo", serif`,
+										fontWeight: 400,
+										fontStyle: "italic",
+									}}
+									color="secondary"
+									variant="outlined"
+									className="sorting__btn"
+									onClick={() => {
+										if (sortingRef.current === 0) {
+											mergeSortVisualizer(arr.slice());
+										}
+									}}>
+									Merge Sort
+								</Button>
+								<Button
+									sx={{
+										fontFamily: `"Arvo", serif`,
+										fontWeight: 400,
+										fontStyle: "italic",
+									}}
+									color="secondary"
+									variant="outlined"
+									className="sorting__btn"
+									onClick={() => {
+										if (sortingRef.current === 0) {
+											quickSortVisualizer(arr.slice());
+										}
+									}}>
+									Quick Sort
+								</Button>
+								<Button
+									sx={{
+										fontFamily: `"Arvo", serif`,
+										fontWeight: 400,
+										fontStyle: "italic",
+									}}
+									color="secondary"
+									variant="outlined"
+									className="sorting__btn"
+									onClick={() => {
+										if (sortingRef.current === 0) {
+											bubbleSortVisualizer(arr.slice());
+										}
+									}}>
+									Bubble Sort
+								</Button>
+								<Button
+									sx={{
+										fontFamily: `"Arvo", serif`,
+										fontWeight: 400,
+										fontStyle: "italic",
+									}}
+									color="secondary"
+									variant="outlined"
+									className="sorting__btn"
+									onClick={() => {
+										if (sortingRef.current === 0) {
+											insertionSortVisualizer(arr.slice());
+										}
+									}}>
+									Insertion Sort
+								</Button>
+								<Button
+									sx={{
+										fontFamily: `"Arvo", serif`,
+										fontWeight: 400,
+										fontStyle: "italic",
+									}}
+									color="secondary"
+									variant="outlined"
+									className="sorting__btn"
+									onClick={() => {
+										if (sortingRef.current === 0) {
+											selectionSortVisualizer(arr.slice());
+										}
+									}}>
+									Selection Sort
+								</Button>
+								<Button
+									sx={{
+										fontFamily: `"Arvo", serif`,
+										fontWeight: 400,
+										fontStyle: "italic",
+									}}
+									variant="outlined"
+									color="secondary"
+									className="sorting__btn"
+									onClick={() => {
+										if (sortingRef.current === 0) {
+											heapSortVisualizer(arr.slice());
+										}
+									}}>
+									Heap Sort
+								</Button>
+							</div>
 						</div>
 					</div>
 				</div>
